@@ -1,0 +1,27 @@
+
+th {
+ padding-top: 12px;
+ padding-bottom: 12px;
+ 
+ background-color: #005857;
+ color: white;
+}
+
+td, th {
+ border: 1px solid #ddd;
+ padding: 8px;
+}
+
+td::first-letter {
+ text-transform: uppercase;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-name {
+    color: #005857;
+    cursor: pointer;
+}
+
+.add-name:hover {
+    color: #078a88;
+}

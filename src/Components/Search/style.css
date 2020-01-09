@@ -1,0 +1,12 @@
+.search-currency {
+    height: 30px;
+    font-size: 13px;
+    background-color: white;
+    font-weight: bold;
+    border-color: #005857;
+    padding-left: 5px;
+}
+
+.search-currency::placeholder {
+    color: grey;
+}
