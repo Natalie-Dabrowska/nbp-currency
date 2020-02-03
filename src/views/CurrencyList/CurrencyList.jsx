@@ -21,6 +21,7 @@ class CurrencyList extends React.Component {
     this.setState({
       favoriteCurrencyList: newFavoriteList
     });
+    localStorage.setItem('favoriteCurrencyList', JSON.stringify(newFavoriteList));
   }
 
   removeFromFavorite = (codeValue) => {
@@ -30,6 +31,7 @@ class CurrencyList extends React.Component {
     this.setState({
       favoriteCurrencyList: newFavoriteList
     })
+    localStorage.setItem('favoriteCurrencyList', JSON.stringify(newFavoriteList));
   }
 
   handleSearchText = event => {
@@ -41,7 +43,8 @@ class CurrencyList extends React.Component {
   componentDidMount() {
     api.getCurrency().then(response => {
       this.setState({
-        currencyArray: response[0].rates
+        currencyArray: response[0].rates,
+        favoriteCurrencyList: JSON.parse(localStorage.getItem('favoriteCurrencyList')) || []
       });
     });
   }
